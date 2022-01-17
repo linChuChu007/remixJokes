@@ -2,7 +2,11 @@ import { ActionFunction, LinksFunction, redirect } from "remix";
 import { useActionData, json, Link, useSearchParams } from "remix";
 import { db } from "../../utils/db.server";
 import stylesUrl from "../styles/login.css";
-import { createUserSession, login } from "../../utils/session.server";
+import {
+  createUserSession,
+  login,
+  requireUserId,
+} from "../../utils/session.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
