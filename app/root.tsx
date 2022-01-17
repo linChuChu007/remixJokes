@@ -1,4 +1,4 @@
-import { Links, LiveReload, Outlet } from "remix";
+import { Links, LiveReload, Outlet, Scripts } from "remix";
 import type { LinksFunction } from "remix";
 import globalStylesUrl from "./styles/global.css";
 import globalMediumStylesUrl from "./styles/global-medium.css";
@@ -33,6 +33,7 @@ export default function App() {
       </head>
       <body>
         <Outlet />
+        <Scripts />
         {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
       </body>
     </html>
