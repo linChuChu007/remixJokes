@@ -1,7 +1,7 @@
 import type { ActionFunction } from "remix";
 import { useActionData, redirect, json } from "remix";
-import { db } from "~/utils/db.server";
-import { requireUserId } from "~/utils/session.server";
+import { db } from "../../../utils/db.server";
+import { requireUserId } from "../../../utils/session.server";
 
 function validateJokeContent(content: string) {
   if (content.length < 10) {
