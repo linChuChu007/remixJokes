@@ -1,5 +1,5 @@
 import { ActionFunction, LinksFunction, redirect } from "remix";
-import { useActionData, json, Link, useSearchParams } from "remix";
+import { useActionData, json, Link, useSearchParams, Form } from "remix";
 import { db } from "../../utils/db.server";
 import stylesUrl from "../styles/login.css";
 import { createUserSession, login, register } from "../../utils/session.server";
@@ -109,7 +109,7 @@ export default function Login() {
     <div className="container">
       <div className="content" data-light="">
         <h1>Login</h1>
-        <form
+        <Form
           method="post"
           aria-describedby={
             actionData?.formError ? "form-error-message" : undefined
@@ -200,7 +200,7 @@ export default function Login() {
           <button type="submit" className="button">
             Submit
           </button>
-        </form>
+        </Form>
       </div>
       <div className="links">
         <ul>
